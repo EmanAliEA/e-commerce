@@ -1,0 +1,17 @@
+:root {
+  font-size: 10px;
+}
+
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  outline: none;
+}
