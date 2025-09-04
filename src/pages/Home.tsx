@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useProductStore } from '../stores/StoreContextProvider';
 import { observer } from 'mobx-react-lite';
 import { toJS } from 'mobx';
-import img from '../assets/OIP.jpeg';
+// import img from '../assets/OIP.jpeg';
 import styled from 'styled-components';
 import ProductsList from '../components/ProductsList';
 import ProductItem from '../components/ProductItem';
