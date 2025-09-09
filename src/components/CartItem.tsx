@@ -24,7 +24,7 @@ const CartLi = styled.li`
     font-size: 2rem;
   }
 
-  @media (max-width: 320px) {
+  @media (max-width: 768px) {
     p {
       font-size: 1.5rem;
     }

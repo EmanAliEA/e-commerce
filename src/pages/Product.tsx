@@ -51,6 +51,9 @@ const Product: React.FC = () => {
   const { productsStore } = useProductStore();
   const product = productsStore.getProduct(Number(id));
   console.log(product);
+  const handleAddToCart = () => {
+    product && productsStore.addToCart(product);
+  };
   return (
     <Container>
       <ProductImage src={product?.image} alt={product?.title} />
@@ -64,7 +67,7 @@ const Product: React.FC = () => {
         <span className="price">${product?.price}</span>
         <span>{product?.description}</span>
         <Buttons>
-          <button>add to cart</button>
+          <button onClick={handleAddToCart}>add to cart</button>
           <NavLink to="/cart">go to cart</NavLink>
         </Buttons>
       </TextDiv>

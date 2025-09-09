@@ -20,7 +20,7 @@ const NavContainer = styled.nav`
   font-size: 2rem;
   padding: 1.5rem;
 
-  @media (max-width: 320px) {
+  @media (max-width: 425px) {
     font-size: 1.5rem;
     gap: 0.5rem;
   }
@@ -29,12 +29,16 @@ const NavContainer = styled.nav`
 const Logo = styled.span`
   font-size: 2.5rem;
   font-weight: bold;
+
+  @media (max-width: 425px) {
+    font-size: 1.8rem;
+  }
 `;
 
 const NavList = styled.ul`
   display: flex;
   gap: 1.5rem;
-
+  cursor: pointer;
   /* & a.active {
     color: black;
   } */
@@ -45,6 +49,9 @@ const NavList = styled.ul`
 
   & a:hover {
     color: black;
+  }
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
   }
 `;
 
@@ -69,7 +76,7 @@ const Buttons = styled.div`
     background-color: black;
     color: white;
   }
-  @media (max-width: 320px) {
+  @media (max-width: 768px) {
     a {
       padding: 0.5rem;
       font-size: 1rem;
@@ -84,9 +91,9 @@ const NavBar: React.FC = () => {
       <Logo>E-commerce</Logo>
       <NavList>
         <NavLink to="/">home</NavLink>
-        <NavLink to="">products</NavLink>
-        <NavLink to="">about</NavLink>
-        <NavLink to="">contact</NavLink>
+        <NavLink to="products">products</NavLink>
+        <NavLink to="about">about</NavLink>
+        <NavLink to="contact">contact</NavLink>
       </NavList>
 
       <Buttons>

@@ -27,11 +27,14 @@ const Container = styled.div`
     margin: 0;
   }
   & ul {
+    top: 0;
+    display: flex;
     gap: 2rem;
     flex-direction: column;
-    justify-content: center;
     padding: 2rem;
     overscroll-behavior-y: contain;
+    overflow-y: scroll;
+    max-height: 30rem;
 
     & > p {
       text-align: center;
@@ -40,7 +43,7 @@ const Container = styled.div`
       color: #666464b6;
     }
   }
-  @media (max-width: 320px) {
+  @media (max-width: 768px) {
     width: 100%;
     ul {
       padding: 1rem;

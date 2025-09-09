@@ -1,4 +1,4 @@
-import { action, makeAutoObservable, set } from 'mobx';
+import { makeAutoObservable } from 'mobx';
 import type { Product } from './Product';
 import { fetchProductsData } from '../services/productsAPI';
 import { CartItem } from './Cart';
@@ -50,7 +50,7 @@ export class ProductsStore {
     );
 
     return {
-      total: total,
+      total: Math.round(total),
       length: productsLength,
     };
   }
@@ -68,7 +68,7 @@ export class ProductsStore {
   // };
 
   changeQuantity = (id: number, quantity: number) => {
-    let foundItem = this.cart.find((item) => item.id === id);
+    const foundItem = this.cart.find((item) => item.id === id);
     if (foundItem?.quantity === 0 && quantity < 0)
       this.cart = this.cart.filter((item) => item.id !== id);
     this.cart = this.cart.map((item) =>

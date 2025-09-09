@@ -23,8 +23,11 @@ const Container = styled.div`
     width: 70%;
     height: 20rem;
   }
-  @media (max-width: 320px) {
+  @media (max-width: 425px) {
     width: 100%;
+  }
+  @media (max-width: 768px) {
+    width: 40%;
   }
 `;
 
@@ -53,6 +56,7 @@ const PriceText = styled.span`
 
 const ProductItem: React.FC<Props> = ({ product, addToCart }) => {
   const handleAddToCart = () => {
+    console.log('add to cart', product);
     addToCart(product);
   };
   return (

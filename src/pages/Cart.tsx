@@ -16,7 +16,7 @@ const CartContainer = styled.div`
   padding: 3rem 1rem;
   gap: 6rem;
 
-  @media (max-width: 320px) {
+  @media (max-width: 768px) {
     width: 95%;
     & > div:nth-child(2) {
       gap: 1.5rem;
