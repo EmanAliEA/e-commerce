@@ -19,6 +19,7 @@ const NavContainer = styled.nav`
   align-items: center;
   font-size: 2rem;
   padding: 1.5rem;
+  z-index: 4;
 
   @media (max-width: 425px) {
     font-size: 1.5rem;
@@ -37,7 +38,7 @@ const Logo = styled.span`
 
 const NavList = styled.ul`
   display: flex;
-  gap: 1.5rem;
+  gap: 1.8rem;
   cursor: pointer;
   /* & a.active {
     color: black;
