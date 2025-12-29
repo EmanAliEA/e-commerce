@@ -39,7 +39,7 @@ const CategoryList: React.FC<Props> = ({ productStore }) => {
   const handleOnClick = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
-    productStore.getProductsOfCategory(event.target.textContent);
+    productStore.getProductsOfCategory((event.target as any).textContent);
   };
   return (
     <List>

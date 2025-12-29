@@ -28,7 +28,7 @@ const Categories = styled.div`
   }
 `;
 
-const About: React.FC<Props> = (props) => {
+const About: React.FC<Props> = () => {
   return (
     <AboutContainer>
       <Title title="about" heading={true} />

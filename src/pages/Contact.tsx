@@ -11,7 +11,7 @@ const ContactContainer = styled.div`
   margin: auto;
   padding: 3rem 1rem;
 `;
-const Contact: React.FC<Props> = (props) => {
+const Contact: React.FC<Props> = () => {
   return (
     <ContactContainer>
       <Title title="contact" heading={true} />
