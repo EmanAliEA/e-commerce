@@ -1,54 +1,119 @@
-# React + TypeScript + Vite
+# E-Commerce React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a modern, responsive e-commerce web application built with **React**, **TypeScript**, **Vite**, **MobX**, and **Styled Components**. It features a product catalog, shopping cart, checkout flow, and more.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Product listing with categories
+- Product details page
+- Shopping cart with add/remove/update functionality
+- Checkout page
+- Responsive design
+- State management with MobX
+- Routing with React Router
+- Styled with Styled Components
+- Unit and component tests with Vitest and Testing Library
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+src/
+  assets/                # Images and static assets
+  components/            # Reusable UI components (NavBar, ProductItem, CartList, etc.)
+  pages/                 # Main pages (Home, Product, Cart, CheckOut, About, Contact)
+  services/              # API services (productsAPI.ts)
+  stores/                # MobX stores for state management
+  ui/                    # UI helpers and styles
+  App.tsx                # Main app component
+  main.tsx               # Entry point
+public/                  # Static public files
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
+
+### Installation
+
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/EmanAliEA/e-commerce.git
+   cd e-commerce
+   ```
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+
+### Running the App
+
+- **Development server:**
+
+  ```sh
+  npm run dev
+  ```
+
+  The app will be available at [http://localhost:5173](http://localhost:5173) by default.
+
+- **Build for production:**
+
+  ```sh
+  npm run build
+  ```
+
+- **Preview production build:**
+
+  ```sh
+  npm run preview
+  ```
+
+- **Run tests:**
+
+  ```sh
+  npm test
+  ```
+
+- **Lint the code:**
+  ```sh
+  npm run lint
+  ```
+
+## Main Scripts
+
+| Script          | Description              |
+| --------------- | ------------------------ |
+| npm run dev     | Start development server |
+| npm run build   | Build for production     |
+| npm run preview | Preview production build |
+| npm test        | Run tests                |
+| npm run lint    | Lint the codebase        |
+
+## Technologies Used
+
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [MobX](https://mobx.js.org/)
+- [Styled Components](https://styled-components.com/)
+- [React Router](https://reactrouter.com/)
+- [Vitest](https://vitest.dev/)
+- [Testing Library](https://testing-library.com/)
+
+## Folder Highlights
+
+- **src/components/**: UI components like NavBar, ProductsList, CartItem, etc.
+- **src/pages/**: Main pages (Home, Product, Cart, CheckOut, About, Contact)
+- **src/stores/**: MobX stores for products and cart state
+- **src/services/**: API logic for fetching products
+- **src/ui/**: Shared UI elements and styles
+
+## Author
+
+Eman Ali ([GitHub](https://github.com/EmanAliEA))
+
+---
+
+Feel free to contribute or open issues for suggestions and improvements!
